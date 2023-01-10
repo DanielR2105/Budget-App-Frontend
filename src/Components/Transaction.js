@@ -1,14 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import "./Transactions.css"
 
 export default function Transaction({transaction, index}) {
+    let dynamicColor = ""
+    if (transaction.amount > 0) {
+        dynamicColor = "green"
+    } else if (transaction.amount === 0) {
+        dynamicColor = "white"
+    } else if (transaction.amount < 0) {
+        dynamicColor = "red"
+    }
   return (
-    <div>
-        <h2>{transaction.date}</h2>
+    <div className='transaction' >
+        <div className='cell' >
+        <h3>{transaction.date}</h3>
+        </div>
+        <div className='cell' >
         <Link to={`/transactions/${index}`} >
-        <h2>{transaction.item_name}</h2>
+        <h3>{transaction.item_name}</h3>
         </Link>
-        <h2>${transaction.amount}</h2>
+        </div>
+        <div className='cell' >
+        <h3><span className={dynamicColor} >${transaction.amount}</span></h3>
+        </div>
     </div>
   )
 }

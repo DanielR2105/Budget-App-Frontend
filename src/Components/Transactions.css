@@ -1,0 +1,44 @@
+html {
+  background: url(https://as2.ftcdn.net/v2/jpg/00/94/93/43/1000_F_94934308_xkd3ouMtwqT5PvxKq8qKltSSyg17ON1C.jpg) no-repeat center center fixed ;
+  background-size: cover;
+}
+
+.transaction {
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+}
+
+.cell {
+  border: solid;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.green {
+    color: darkgreen;
+  }
+  
+  .black {
+    color: wheat;
+  }
+  
+  .red {
+    color: darkred;
+  }
+
+  .white {
+    color: white;
+  }

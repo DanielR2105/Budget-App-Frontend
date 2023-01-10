@@ -6,7 +6,7 @@ export default function Nav() {
         <article>
           <h1>
             <Link to="/">
-              Home
+              Budget App
             </Link>
           </h1>
         </article>

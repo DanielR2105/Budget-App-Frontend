@@ -1,0 +1,23 @@
+.form-wrapper {
+    justify-content: center;
+    text-align: center;
+}
+
+form {
+    display: block;
+    justify-content: center;
+    width: 30%;
+    margin: auto;
+}
+
+label {
+    width: 5%;
+    font-weight: bold;
+    float: left;
+}
+
+input {
+    margin: 1%;
+    width: 120px;
+    display: inline-block;
+}

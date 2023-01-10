@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router"
 import axios from "axios"
+import "./form.css"
 const apiUrl = process.env.REACT_APP_API_URL
 
 export default function NewForm() {
@@ -32,7 +33,7 @@ export default function NewForm() {
     }
 
   return (
-    <div>
+    <div className="form-wrapper">
         <h1>Add a new item</h1>
         <form onSubmit={handleSubmit} >
             <label htmlFor="Date" >Date</label>
@@ -41,12 +42,14 @@ export default function NewForm() {
             id="date"
             onChange={handleTextChange}
             />
+            <br/>
             <label htmlFor="Name" >Name</label>
             <input 
             type="text"
             id="item_name"
             onChange={handleTextChange}
             />
+            <br/>
             <label htmlFor="Amount" >Amount</label>
             <input 
             type="number"
@@ -60,6 +63,7 @@ export default function NewForm() {
             id="from"
             onChange={handleTextChange}
             />
+            <br/>
             <label htmlFor="Category" >Category</label>
             <input 
             type="text"

@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { Link, useParams, useNavigate } from "react-router-dom"
+import "./form.css"
 const apiUrl = process.env.REACT_APP_API_URL
 
 export default function Editform() {
@@ -41,7 +42,7 @@ export default function Editform() {
     }
 
   return (
-    <div>
+    <div className="form-wrapper" >
         <h1>Edit a transaction</h1>
         <form onSubmit={handleSubmit} >
             <label htmlFor="Date" >Date</label>
@@ -51,6 +52,7 @@ export default function Editform() {
             value={transaction.date}
             onChange={handleTextChange}
             />
+            <br/>
             <label htmlFor="Name" >Name</label>
             <input 
             type="text"
@@ -58,6 +60,7 @@ export default function Editform() {
             value={transaction.item_name}
             onChange={handleTextChange}
             />
+            <br/>
             <label htmlFor="Amount" >Amount</label>
             <input 
             type="number"
@@ -73,6 +76,7 @@ export default function Editform() {
             value={transaction.from}
             onChange={handleTextChange}
             />
+            <br/>
             <label htmlFor="Category" >Category</label>
             <input 
             type="text"
